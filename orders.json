@@ -915,5 +915,147 @@
     "shipping": 0,
     "total": 14697,
     "status": "Processing"
+  },
+  {
+    "order_id": 590006,
+    "customer_name": "Sovanmolyka",
+    "phone": "+855312422228",
+    "email": "tengsovanmolyka09@gmail.com",
+    "address": "No. 86A, Street 110\r\nRussian Federation Blvd (110), Phnom Penh",
+    "payment_method": "khqr",
+    "items": [
+      {
+        "_id": 7,
+        "title": "Black t-shirt for women",
+        "category": "women",
+        "price": 20,
+        "qty": 15,
+        "size": "L",
+        "brand": "BasicTees",
+        "image": "https://images.pexels.com/photos/2010812/pexels-photo-2010812.jpeg",
+        "stock": 120,
+        "discountedPrice": 18
+      }
+    ],
+    "subtotal": 270,
+    "shipping": 3,
+    "total": 273,
+    "status": "Processing"
+  },
+  {
+    "order_id": 909472,
+    "customer_name": "Sovanmolyka",
+    "phone": "+855312422228",
+    "email": "tengsovanmolyka09@gmail.com",
+    "address": "No. 86A, Street 110\r\nRussian Federation Blvd (110), Phnom Penh",
+    "payment_method": "visa",
+    "items": [
+      {
+        "_id": 1,
+        "title": "Long sleeve Jacket",
+        "category": "women",
+        "price": 150,
+        "qty": 50,
+        "size": "M",
+        "brand": "FashionTrend",
+        "image": "https://images.pexels.com/photos/2584269/pexels-photo-2584269.jpeg",
+        "stock": 50,
+        "discountedPrice": 135
+      }
+    ],
+    "subtotal": 6750,
+    "shipping": 0,
+    "total": 6750,
+    "status": "Processing"
+  },
+  {
+    "order_id": 121784,
+    "customer_name": "Sovanmolyka",
+    "phone": "+855312422228",
+    "email": "tengsovanmolyka09@gmail.com",
+    "address": "No. 86A, Street 110\r\nRussian Federation Blvd (110), Phnom Penh",
+    "payment_method": "visa",
+    "items": [
+      {
+        "_id": 20,
+        "title": "Formal for Men",
+        "category": "men",
+        "price": 490,
+        "qty": 20,
+        "size": "XL",
+        "brand": "FormalFit",
+        "image": "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg",
+        "stock": 20,
+        "discountedPrice": 441
+      },
+      {
+        "_id": 20,
+        "title": "Formal for Men",
+        "category": "men",
+        "price": 490,
+        "qty": 6,
+        "size": "M",
+        "brand": "FormalFit",
+        "image": "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg",
+        "stock": 20,
+        "discountedPrice": 441
+      }
+    ],
+    "subtotal": 11466,
+    "shipping": 0,
+    "total": 11466,
+    "status": "Processing"
+  },
+  {
+    "order_id": 983787,
+    "customer_name": "Sovanmolyka",
+    "phone": "+855312422228",
+    "email": "tengsovanmolyka09@gmail.com",
+    "address": "No. 86A, Street 110\r\nRussian Federation Blvd (110), Phnom Penh",
+    "payment_method": "cod",
+    "items": [
+      {
+        "_id": 1,
+        "title": "Long sleeve Jacket",
+        "category": "women",
+        "price": 150,
+        "qty": 15,
+        "size": "L",
+        "brand": "FashionTrend",
+        "image": "https://images.pexels.com/photos/2584269/pexels-photo-2584269.jpeg",
+        "stock": 50,
+        "discountedPrice": 135
+      }
+    ],
+    "subtotal": 2025,
+    "shipping": 0,
+    "total": 2025,
+    "status": "Processing"
+  },
+  {
+    "order_id": 451703,
+    "customer_name": "Sovanmolyka",
+    "phone": "+855312422228",
+    "email": "tengsovanmolyka09@gmail.com",
+    "address": "No. 86A, Street 110\r\nRussian Federation Blvd (110), Phnom Penh",
+    "payment_method": "cod",
+    "items": [
+      {
+        "_id": 1,
+        "title": "Long sleeve Jacket",
+        "category": "women",
+        "price": 150,
+        "qty": 17,
+        "size": "L",
+        "brand": "FashionTrend",
+        "image": "https://images.pexels.com/photos/2584269/pexels-photo-2584269.jpeg",
+        "stock": 50,
+        "discountedPrice": 135
+      }
+    ],
+    "subtotal": 2295,
+    "shipping": 0,
+    "total": 2295,
+    "status": "Processing"
   }
 ]

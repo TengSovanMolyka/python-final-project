@@ -55,8 +55,8 @@ def load_orders():
 # ==============================================================================
 # TELEGRAM BOT FUNCTION
 # ==============================================================================
-TELEGRAM_TOKEN = "8321967454:AAFdiaaT3kFD47xJXdbb-wD33hDfSYN8IgY"
-CHAT_ID = "1009212249"
+TELEGRAM_TOKEN = "8321967454:AAG4oEJUxN3jEAzznhwh1T1o__M9Wsppicc"
+CHAT_ID = -1004420539883
 
 # ==============================================================================
 # TELEGRAM BOT NOTIFICATIONS
@@ -136,8 +136,12 @@ Thank you for your order, and we can't wait to serve you again.
         print("Telegram Status:", r.status_code)
         print("Telegram Response:", r.text)
 
+        return r.ok
+
     except Exception as e:
         print("Telegram Error:", e)
+
+        return False
 
 # ==============================================================================
 # HOME PAGE
