@@ -27,38 +27,86 @@ app.secret_key = "your_secret_key"  # needed for flash messages
 # ==============================================================================
 # USERS
 # ==============================================================================
+# USERS_FILE = "users.json"
+# def load_users():
+#     if os.path.exists(USERS_FILE):
+#         with open(USERS_FILE, "r") as f:
+#             return json.load(f)
+#     return []
+
+# def save_users(users):
+#     with open(USERS_FILE, "w") as f:
+#         json.dump(users, f, indent=4)
+
 USERS_FILE = "users.json"
+
 def load_users():
-    if os.path.exists(USERS_FILE):
-        with open(USERS_FILE, "r") as f:
-            return json.load(f)
+    try:
+        if os.path.exists(USERS_FILE):
+            with open(USERS_FILE, "r", encoding="utf-8") as f:
+                return json.load(f)
+    except Exception as e:
+        print("load_users error:", e)
+
     return []
 
 def save_users(users):
-    with open(USERS_FILE, "w") as f:
-        json.dump(users, f, indent=4)
+    try:
+        with open(USERS_FILE, "w", encoding="utf-8") as f:
+            json.dump(users, f, indent=4)
+        return True
+
+    except Exception as e:
+        print("save_users error:", e)
+        return False
 
 # ==============================================================================
 # ORDERS
 # ==============================================================================
+# ORDERS_FILE = "orders.json"
+# def save_order(order):
+#     if os.path.exists(ORDERS_FILE):
+#         with open(ORDERS_FILE, "r") as f:
+#             orders = json.load(f)
+#     else:
+#         orders = []
+
+#     orders.append(order)
+
+#     with open(ORDERS_FILE, "w") as f:
+#         json.dump(orders, f, indent=2)
+
+# def load_orders():
+#     if os.path.exists(ORDERS_FILE):
+#         with open(ORDERS_FILE, "r") as f:
+#             return json.load(f)
+#     return []
+
 ORDERS_FILE = "orders.json"
-def save_order(order):
-    if os.path.exists(ORDERS_FILE):
-        with open(ORDERS_FILE, "r") as f:
-            orders = json.load(f)
-    else:
-        orders = []
-
-    orders.append(order)
-
-    with open(ORDERS_FILE, "w") as f:
-        json.dump(orders, f, indent=2)
 
 def load_orders():
-    if os.path.exists(ORDERS_FILE):
-        with open(ORDERS_FILE, "r") as f:
-            return json.load(f)
+    try:
+        if os.path.exists(ORDERS_FILE):
+            with open(ORDERS_FILE, "r", encoding="utf-8") as f:
+                return json.load(f)
+    except Exception as e:
+        print("load_orders error:", e)
+
     return []
+
+def save_order(order):
+    try:
+        orders = load_orders()
+        orders.append(order)
+
+        with open(ORDERS_FILE, "w", encoding="utf-8") as f:
+            json.dump(orders, f, indent=2)
+
+        return True
+
+    except Exception as e:
+        print("save_order error:", e)
+        return False
 
 # ==============================================================================
 # TELEGRAM BOT FUNCTION
