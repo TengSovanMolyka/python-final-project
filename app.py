@@ -16,6 +16,14 @@ from werkzeug.utils import secure_filename
 app = Flask(__name__)
 app.secret_key = "your_secret_key"  # needed for flash messages
 
+def save_users(users):
+    print("User save skipped on Vercel")
+    return True
+  
+def save_order(order):
+    print("Order received:", order)
+    return True
+
 # ==============================================================================
 # USERS
 # ==============================================================================
@@ -26,25 +34,25 @@ def load_users():
             return json.load(f)
     return []
 
-def save_users(users):
-    with open(USERS_FILE, "w") as f:
-        json.dump(users, f, indent=4)
+# def save_users(users):
+#     with open(USERS_FILE, "w") as f:
+#         json.dump(users, f, indent=4)
 
 # ==============================================================================
 # ORDERS
 # ==============================================================================
 ORDERS_FILE = "orders.json"
-def save_order(order):
-    if os.path.exists(ORDERS_FILE):
-        with open(ORDERS_FILE, "r") as f:
-            orders = json.load(f)
-    else:
-        orders = []
+# def save_order(order):
+#     if os.path.exists(ORDERS_FILE):
+#         with open(ORDERS_FILE, "r") as f:
+#             orders = json.load(f)
+#     else:
+#         orders = []
 
-    orders.append(order)
+#     orders.append(order)
 
-    with open(ORDERS_FILE, "w") as f:
-        json.dump(orders, f, indent=2)
+#     with open(ORDERS_FILE, "w") as f:
+#         json.dump(orders, f, indent=2)
 
 def load_orders():
     if os.path.exists(ORDERS_FILE):
