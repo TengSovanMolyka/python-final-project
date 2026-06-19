@@ -501,7 +501,10 @@ def checkout_confirm():
             )
             return redirect(url_for("cart"))
 
-    save_order(order)
+    # save_order(order)
+    if not save_order(order):
+    flash("Unable to save order.", "danger")
+    return redirect(url_for("cart"))
 
     # Reduce stock
     for item in data["cart_products"]:
@@ -626,7 +629,10 @@ def create_user():
             "password": password  # stored as plain text
         }
         users.append(new_user)
-        save_users(users)
+        # save_users(users)
+        if not save_users(users):
+        flash("Unable to create account.", "danger")
+        return redirect(url_for("create_user"))
 
         flash("User created successfully! Please login.", "success")
         return redirect(url_for("login"))
